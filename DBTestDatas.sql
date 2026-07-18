@@ -75,8 +75,8 @@ INSERT INTO Food.Payments (OrderID, Amount, IsSuccessful) VALUES
 (4, 280000, 0), 
 (5, 332500, 1);
 
-INSERT INTO Food.TaxiFoodDeliveries(OrderId, PickupAddress, DropoffAddress, FoodDeliveryStatus)
-VALUES (1, 'Tehran, Valiaser St, Restaurant', 'Tehran, Vanak, Costumer', 'Pending');
+/*INSERT INTO Food.TaxiFoodDeliveries(OrderId, PickupAddress, DropoffAddress, FoodDeliveryStatus)
+VALUES (1, 'Tehran, Valiaser St, Restaurant', 'Tehran, Vanak, Costumer', 'Pending');*/
 
 /*Testing Inserted Datas
 Select * From Food.Users;
