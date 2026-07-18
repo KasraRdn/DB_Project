@@ -12,7 +12,7 @@ BEGIN
 END;
 
 CREATE FUNCTION GetLatestStatus (@OrdID INT)
-RETURNS NVARCHAR(50)
+RETURNS VARCHAR(50)
 AS
 BEGIN
     DECLARE @LastStatus NVARCHAR(50);
@@ -38,3 +38,8 @@ BEGIN
     
     RETURN @Final;
 END;
+
+/*Testing Functions
+SELECT dbo.GetRestaurantRating(1) AS AverageRating;
+SELECT dbo.GetLatestStatus(1) AS CurrentOrderStatus;
+SELECT dbo.GetFinalPrice(1) AS FinalPriceToPay;*/
