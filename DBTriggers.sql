@@ -3,7 +3,7 @@ ON Food.Restaurants
 INSTEAD OF DELETE
 AS
 BEGIN
-    UPDATE Restaurants
+    UPDATE Food.Restaurants
     SET IsActive = 0
     WHERE RestaurantID IN (SELECT RestaurantID FROM deleted);
 END;
