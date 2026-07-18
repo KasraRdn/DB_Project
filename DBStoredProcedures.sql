@@ -1,29 +1,29 @@
-﻿CREATE OR ALTER PROCEDURE SubmitNewOrder
+﻿CREATE OR ALTER PROCEDURE Food.SubmitNewOrder
     @UID INT,
     @RestID INT,
     @AddrID INT,
     @Total DECIMAL(18,2)
 AS
 BEGIN
-    INSERT INTO Orders (UserID, RestaurantID, AddressID, TotalAmount)
+    INSERT INTO Food.Orders (UserID, RestaurantID, AddressID, TotalAmount)
     VALUES (@UID, @RestID, @AddrID, @Total);
     
     DECLARE @NewOrderID INT = SCOPE_IDENTITY();
     
-    INSERT INTO OrderStatusHistory (OrderID, Status)
+    INSERT INTO Food.OrderStatusHistory (OrderID, Status)
     VALUES (@NewOrderID, 'Not registered');
 END;
 
-CREATE OR ALTER PROCEDURE ChangeOrderStatus
+CREATE OR ALTER PROCEDURE Food.ChangeOrderStatus
     @OrdID INT,
     @NewStatus NVARCHAR(50)
 AS
 BEGIN
-    INSERT INTO OrderStatusHistory (OrderID, Status)
+    INSERT INTO Food.OrderStatusHistory (OrderID, Status)
     VALUES (@OrdID, @NewStatus);
 END;
 
-CREATE OR ALTER PROCEDURE AddNewReview
+CREATE OR ALTER PROCEDURE Food.AddNewReview
     @UID INT,
     @RestID INT,
     @Rate INT,
@@ -32,7 +32,7 @@ AS
 BEGIN
     IF @Rate >= 1 AND @Rate <= 5
     BEGIN
-        INSERT INTO Reviews (UserID, RestaurantID, Rating, Comment)
+        INSERT INTO Food.Reviews (UserID, RestaurantID, Rating, Comment)
         VALUES (@UID, @RestID, @Rate, @Txt);
     END
 END;
