@@ -114,3 +114,20 @@ CREATE TABLE Food.TaxiFoodDeliveries (
     DropoffAddress NVARCHAR(255) NOT NULL,
     FoodDeliveryStatus NVARCHAR(20) DEFAULT 'Pending'
 );
+
+--DROP TABLE Food.TaxiFoodDeliveries;
+--DROP TABLE Food.Payments;
+--DROP TABLE Food.OrderStatusHistory;
+--DROP TABLE Food.OrderDetails;
+--DROP TABLE Food.Orders;
+--DROP TABLE Food.Reviews;
+--DROP TABLE Food.MenuItems;
+--DROP TABLE Food.Addresses;
+--DROP TABLE Food.SystemLogs;
+--DROP TABLE Food.Coupons;
+--DROP TABLE Food.Categories;
+--DROP TABLE Food.Restaurants;
+--DROP TABLE Food.Users;
+--GO
+--DROP SCHEMA Food;
+--GO
