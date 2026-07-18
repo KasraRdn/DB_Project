@@ -30,7 +30,7 @@ RETURNS DECIMAL(18,2)
 AS
 BEGIN
     DECLARE @Final DECIMAL(18,2);
-
+		
     SELECT @Final = O.TotalAmount - ISNULL((O.TotalAmount * C.DiscountPercent / 100), 0)
     FROM Orders O
     LEFT JOIN Coupons C ON O.CouponID = C.CouponID
