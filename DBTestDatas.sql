@@ -75,6 +75,9 @@ INSERT INTO Food.Payments (OrderID, Amount, IsSuccessful) VALUES
 (4, 280000, 0), 
 (5, 332500, 1);
 
+INSERT INTO Food.DeliveryDispatches (OrderId, PickupAddress, DropoffAddress, DispatchStatus)
+VALUES (1, 'Tehran, Valiaser St, Restaurant', 'Tehran, Vanak, Costumer', 'Pending');
+
 /*Testing Inserted Datas
 Select * From Food.Users;
 Select * From Food.Restaurants;
@@ -86,4 +89,5 @@ Select * From Food.Reviews;
 Select * From Food.Orders;
 Select * From Food.OrderDetails;
 Select * From Food.OrderStatusHistory;
-Select * From Food.Payments;*/
+Select * From Food.Payments;
+SELECT * FROM Taxi.FoodDeliveries;*/
