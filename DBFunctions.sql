@@ -39,7 +39,7 @@ BEGIN
     RETURN @Final;
 END;
 
-/*Testing Functions
-SELECT Food.GetRestaurantRating(1) AS AverageRating;
-SELECT Food.GetLatestStatus(1) AS CurrentOrderStatus;
-SELECT Food.GetFinalPrice(1) AS FinalPriceToPay;*/
+/*Testing Functions*/
+--SELECT Food.GetRestaurantRating(1) AS AverageRating;
+--SELECT Food.GetLatestStatus(1) AS CurrentOrderStatus;
+--SELECT Food.GetFinalPrice(1) AS FinalPriceToPay;

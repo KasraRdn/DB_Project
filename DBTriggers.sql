@@ -129,16 +129,16 @@ BEGIN
     FROM inserted;
 END;
 
-/*Testing Trigger
-DELETE FROM Food.Restaurants WHERE RestaurantID = 1;
-SELECT RestaurantID, Name, IsActive FROM Food.Restaurants WHERE RestaurantID = 1;
+/* Testing Trigger */
+--DELETE FROM Food.Restaurants WHERE RestaurantID = 1;
+--SELECT RestaurantID, Name, IsActive FROM Food.Restaurants WHERE RestaurantID = 1;
 
-INSERT INTO Food.Payments (OrderID, Amount, IsSuccessful) 
-VALUES (1, -50000, 0);
+--INSERT INTO Food.Payments (OrderID, Amount, IsSuccessful) 
+--VALUES (1, -50000, 0);
 
-INSERT INTO Food.MenuItems (RestaurantID, CategoryID, Name, Price, IsAvailable) 
-VALUES (1, 1, 'Test Burger', 150000, 1);
-UPDATE Food.MenuItems 
-SET Price = 160000 
-WHERE Name = 'Test Burger';
-SELECT * FROM Food.SystemLogs ORDER BY LogDate DESC;*/
+--INSERT INTO Food.MenuItems (RestaurantID, CategoryID, Name, Price, IsAvailable) 
+--VALUES (1, 1, 'Test Burger', 150000, 1);
+--UPDATE Food.MenuItems 
+--SET Price = 160000 
+--WHERE Name = 'Test Burger';
+--SELECT * FROM Food.SystemLogs ORDER BY LogDate DESC;
