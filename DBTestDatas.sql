@@ -74,3 +74,16 @@ INSERT INTO Food.Payments (OrderID, Amount, IsSuccessful) VALUES
 (3, 24000, 1),
 (4, 280000, 0), 
 (5, 332500, 1);
+
+/*Testing Inserted Datas
+Select * From Food.Users;
+Select * From Food.Restaurants;
+Select * From Food.Categories;
+Select * From Food.Coupons;
+Select * From Food.Addresses;
+Select * From Food.MenuItems;
+Select * From Food.Reviews;
+Select * From Food.Orders;
+Select * From Food.OrderDetails;
+Select * From Food.OrderStatusHistory;
+Select * From Food.Payments;*/
