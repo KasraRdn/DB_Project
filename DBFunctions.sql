@@ -40,6 +40,6 @@ BEGIN
 END;
 
 /*Testing Functions
-SELECT dbo.GetRestaurantRating(1) AS AverageRating;
-SELECT dbo.GetLatestStatus(1) AS CurrentOrderStatus;
-SELECT dbo.GetFinalPrice(1) AS FinalPriceToPay;*/
+SELECT Food.GetRestaurantRating(1) AS AverageRating;
+SELECT Food.GetLatestStatus(1) AS CurrentOrderStatus;
+SELECT Food.GetFinalPrice(1) AS FinalPriceToPay;*/

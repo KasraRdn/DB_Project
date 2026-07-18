@@ -38,7 +38,6 @@ BEGIN
 END;
 
 /*Testing Procedure
-EXEC SubmitNewOrder @UID = 2, @RestID = 2, @AddrID = 2, @Total = 350000;
-EXEC ChangeOrderStatus @OrdID = 1, @NewStatus = 'preparing';
-EXEC AddNewReview @UID = 2, @RestID = 2, @Rate = 4, @Txt = 'Perfect quality';*/
-
+EXEC Food.SubmitNewOrder @UID = 2, @RestID = 2, @AddrID = 2, @Total = 350000;
+EXEC Food.ChangeOrderStatus @OrdID = 1, @NewStatus = 'preparing';
+EXEC Food.AddNewReview @UID = 2, @RestID = 2, @Rate = 4, @Txt = 'Perfect quality';*/

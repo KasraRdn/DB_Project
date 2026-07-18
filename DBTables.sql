@@ -106,3 +106,11 @@ CREATE TABLE Food.Payments (
     PaymentDate DATETIME DEFAULT GETDATE(),
     FOREIGN KEY (OrderID) REFERENCES Food.Orders(OrderID)
 );
+
+CREATE TABLE Food.TaxiFoodDeliveries (
+    FoodDeliverId INT IDENTITY(1,1) PRIMARY KEY,
+    OrderId INT NOT NULL REFERENCES Food.Orders(OrderID),
+    PickupAddress NVARCHAR(255) NOT NULL,
+    DropoffAddress NVARCHAR(255) NOT NULL,
+    FoodDeliveryStatus NVARCHAR(20) DEFAULT 'Pending'
+);

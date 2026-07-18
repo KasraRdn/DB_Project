@@ -31,6 +31,6 @@ JOIN Food.Users U ON O.UserID = U.UserID
 JOIN Food.Restaurants R ON O.RestaurantID = R.RestaurantID;
 
 /* Testing Views
-SELECT * FROM ActiveMenus;
-SELECT * FROM RestaurantPerformance;
-SELECT * FROM OrderInvoices;*/
+SELECT * FROM Food.ActiveMenus;
+SELECT * FROM Food.RestaurantPerformance;
+SELECT * FROM Food.OrderInvoices;*/

@@ -119,16 +119,26 @@ BEGIN
     INSERT INTO Food.SystemLogs (TableName, Action, Description) VALUES ('Payments', @Action, 'Modification in Payments table.');
 END;
 
-/*Testing Trigger
-DELETE FROM Restaurants WHERE RestaurantID = 1;
-SELECT RestaurantID, Name, IsActive FROM Restaurants WHERE RestaurantID = 1;
+CREATE OR ALTER TRIGGER Food.FoodSendToTaxi
+ON Food.TaxiFoodDeliveries
+AFTER INSERT
+AS
+BEGIN
+    INSERT INTO Taxi.Deliveries (FoodDeliverId, DeliveryStatus)
+    SELECT FoodDeliverId, 'Requested'
+    FROM inserted;
+END;
 
-INSERT INTO Payments (OrderID, Amount, IsSuccessful) 
+/*Testing Trigger
+DELETE FROM Food.Restaurants WHERE RestaurantID = 1;
+SELECT RestaurantID, Name, IsActive FROM Food.Restaurants WHERE RestaurantID = 1;
+
+INSERT INTO Food.Payments (OrderID, Amount, IsSuccessful) 
 VALUES (1, -50000, 0);
 
-INSERT INTO MenuItems (RestaurantID, CategoryID, Name, Price, IsAvailable) 
+INSERT INTO Food.MenuItems (RestaurantID, CategoryID, Name, Price, IsAvailable) 
 VALUES (1, 1, 'Test Burger', 150000, 1);
-UPDATE MenuItems 
+UPDATE Food.MenuItems 
 SET Price = 160000 
 WHERE Name = 'Test Burger';
-SELECT * FROM SystemLogs ORDER BY LogDate DESC;*/
+SELECT * FROM Food.SystemLogs ORDER BY LogDate DESC;*/
